@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- Lilita One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet"> 
+    <!-- Black And White Picture -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <!-- ini link font -->
+
+
+    <link rel="website icon" type="jpg" href="alat dan bahan/icon.jpg">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="project1.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+        <h1 class="tittle" style="text-align: center">Welcome to the Gallery</h1>
+        <br>
+        <h6>Klik Foto Masing-Masing Yaaa :)</h6>
+        <div class="container">
+            <ul class="foto">
+                <li>
+                    <a id="login-user" data-action="Ajeng" data-password="JsnfKfneoajengjKfnel" href="#pass">
+                        <img src="alat dan bahan/satu banding satu/ajeng 1.jpg" alt="Ajeng">
+                        <span>Ajeng</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a id="login-user" data-action="Andi" data-password="NdjskandandiLtmrplaPT" href="#pass">
+                        <img src="alat dan bahan/satu banding satu/andi 1.jpg" alt="Andi">
+                        <span>Andi</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="login-user" data-action="Alvia" data-password="BfhrjJalviaEidiPBdkf" href="#pass">
+                        <img src="alat dan bahan/satu banding satu/pia 1.jpg" alt="Alvia">
+                        <span>Alvia</span>
+                    </a>
+                </li>
+
+                
+
+                <div class="clear"></div>
+
+            </ul>
+
+        </div>
+
+        <div class="container2">
+            <ul class="gambar">
+                <li>
+                    <a id="login-user" data-action="Ayun" data-password="WueifpPdjeayunPfkrmFG" href="#pass">
+                        <img src="alat dan bahan/satu banding satu/ayun 1.jpg" alt="Ayun">
+                        <span>Ayun</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a id="login-user" data-action="Ririn" data-password="JdkelOdjririnUrilPdjL" href="#pass">
+                        <img src="alat dan bahan/satu banding satu/ririn 1.jpg" alt="Ririn">
+                        <span>Ririn</span>
+                    </a>
+                </li>
+                <div class="clearr"></div>
+            </ul>
+        </div>
+
+        <div class="overlay" id="pass">
+            <a href="#" class="close">X</a>
+            <div class="wrapper">
+                <div class="password">
+                    <div class="titel">
+                        Masukin Passwordnya
+                    </div>
+                    <form action="" method="post" id="submit">
+                        <div class="input_wrap">
+                            <label for="input_text"></label>
+                            <div class="input_field">
+                                <input type="password" class="input" id="input_password">
+                            </div>
+                        </div>
+    
+                        <div class="input_wrap">
+                            <span class="error_msg">Try again</span>
+                            <input type="submit" value="ENTER" class="btn" id="login-btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+    
+        </div>
+
+        <script>
+        window.addEventListener('load', () => {
+        Swal.fire({
+            title: 'Do you want to play music in the background?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.querySelector('.song').play();
+            }
+            });
+        });
+        </script>
+
+
+        <script>
+
+            let correctPassword = "";
+            let actionFunction = "";
+            const loginUser = document.querySelectorAll('#login-user');
+            const loginButton = document.getElementById('login-btn');
+            const input_password = document.getElementById("input_password");
+            const error_msg = document.querySelector(".error_msg")
+
+            $("#submit").submit(function(e) {
+                e.preventDefault();
+
+                if (input_password.value.length < 1 || input_password.value != correctPassword) {
+                    error_msg.style.display = "inline-block";
+                    input_password.style.border = "1px solid #f74040";
+                    return false;
+                }
+                error_msg.style.display = "none";
+            });
+            var input_fields = document.querySelectorAll(".input");
+
+            input_fields.forEach(function (input_item) {
+                input_item.addEventListener("input", function () {
+                    if (input_password.value.length > 0) {
+                        input_password.style.border = "1px solid #1dbf73";
+                    }
+                })
+            });
+
+            loginUser.forEach(log => {
+                log.addEventListener('click', () => {
+                    correctPassword = log.getAttribute('data-password');
+                    actionFunction = log.getAttribute('data-action')
+                    console.log(correctPassword)
+                    console.log(actionFunction)
+                    input_password.value = "";
+                    input_password.focus();
+                });
+            });
+
+            loginButton.addEventListener('click', () => {
+                console.log('hello')
+                if (input_password.value === correctPassword){
+                    console.log('helo')
+                    if (typeof window[actionFunction] === "function") {
+                        window[actionFunction]();
+                    };
+                };
+            });
+
+            function Ajeng(){
+                Swal.fire({
+                    title: "Welcome Ajeng!!!",
+                    text : "You have successfully logged in",
+                    showCancelButton: true,
+                    confirmButtonText: "Next",
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor : 'red',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "penutup.html";
+                    } else if (result.isDenied) {
+                        Swal.fire({
+                        title: "",
+                        text : "",
+                        confirmButtonText : "back",
+                    }).then((result) => {
+                        if(result.isConfirmed) {
+                            Ajeng()
+                        }
+                    });
+                    }
+                });
+            };
+
+            function Andi(){
+                Swal.fire({
+                    title: "Welcome Andi!!!",
+                    text : "You have successfully logged in",
+                    showCancelButton: true,
+                    confirmButtonText: "Next",
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor : 'red',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "penutup.html";
+                    } else if (result.isDenied) {
+                        Swal.fire({
+                        title: "",
+                        text : "",
+                        confirmButtonText : "back",
+                    }).then((result) => {
+                        if(result.isConfirmed) {
+                            Andi()
+                        }
+                    });
+                    }
+                });
+            };
+
+            function Alvia(){
+                Swal.fire({
+                    title: "Welcome Alvia!!!",
+                    text : "You have successfully logged in",
+                    showCancelButton: true,
+                    confirmButtonText: "Next",
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor : 'red',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "penutup.html";
+                    } else if (result.isDenied) {
+                        Swal.fire({
+                        title: "",
+                        text : "",
+                        confirmButtonText : "back",
+                    }).then((result) => {
+                        if(result.isConfirmed) {
+                            Alvia()
+                        }
+                    });
+                    }
+                });
+            };
+
+            function Ayun(){
+                Swal.fire({
+                    title: "Welcome Ayunn!!!",
+                    text : "You have successfully logged in",
+                    showCancelButton: true,
+                    confirmButtonText: "Next",
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor : 'red',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "penutup.html";
+                    } else if (result.isDenied) {
+                        Swal.fire({
+                        title: "",
+                        text : "",
+                        confirmButtonText : "back",
+                    }).then((result) => {
+                        if(result.isConfirmed) {
+                            Ayun()
+                        }
+                    });
+                    }
+                });
+            };
+
+            function Ririn(){
+                Swal.fire({
+                    title: "Welcome Ririn!!!",
+                    text : "You have successfully logged in",
+                    showCancelButton: true,
+                    confirmButtonText: "Next",
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor : 'red',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "penutup.html";
+                    } else if (result.isDenied) {
+                        Swal.fire({
+                        title: "",
+                        text : "",
+                        confirmButtonText : "back",
+                    }).then((result) => {
+                        if(result.isConfirmed) {
+                            Ririn()
+                        }
+                    });
+                    }
+                });
+            };
+
+
+       </script>
+
+
+            <audio class="song" autoplay loop>
+                <source src="alat dan bahan/upin ipin.mp3" type="audio/mp3">
+                </source>
+            </audio>
+
+</body>
+</html>

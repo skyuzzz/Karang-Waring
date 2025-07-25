@@ -1,0 +1,280 @@
+.song {
+    visibility: hidden;
+}
+body {
+    background-image: url(alat\ dan\ bahan/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tittle {
+    font-size: 80px;
+    font-family: "Black And White Picture", serif;
+    color: rgb(236, 69, 47);
+    padding-bottom: 40px;
+    padding-top: 150px;
+    text-shadow: 0 0 10px #ffffff;
+}
+h6 {
+    font-family: 'Lilita One';
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 60px;
+    color: rgb(255, 166, 0);
+    
+
+}
+img {
+    width: 120px;
+    height: 120px;
+}
+.container {
+    width: 600px;
+    margin: auto;
+    z-index: 90;
+}
+.foto li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    float: left;
+    position: relative;
+    padding-right: 39px;
+    padding-left: 39px;
+}
+.foto li img,
+.foto li,
+.foto li span,
+.gambar li,
+.gambar li img,
+.gambar li span {
+    border-radius: 50%;
+}
+.foto li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200,200,200,.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    font-family: 'Lilita One';
+    transform: scale(0) rotate(0);
+    opacity: 0;
+    transition: .3s;
+}
+.foto li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.clear {
+    clear: both;
+}
+
+.container2 {
+    width: 403px;
+    margin: auto;
+    padding-top: 20px;
+    z-index: 90;
+    /* background-color: #333; */
+}
+.gambar li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    float: left;
+    position: relative;
+    padding-left: 44px;
+    padding-right: 30px;
+}
+.gambar li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200,200,200,.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    font-family: 'Lilita One';
+    transform: scale(0) rotate(0);
+    opacity: 0;
+    transition: .3s;
+}
+.gambar li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+.clearr {
+    clear: both;
+}
+
+/* overlay */
+/* Styling dasar untuk modal */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 99;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.8);
+}
+.overlay .close {
+    position: absolute;
+    top: 180px;
+    padding-left: 300px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Lilita One';
+}
+
+
+/* untuk password */
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password {
+    width: 425px;
+    height: auto;
+    background-color: rgba(71, 68, 68, 0.5);
+    padding: 35px 50px;
+    border-radius: 2px;
+}
+.password .titel {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #d1c7c7;
+}
+.password .input_wrap {
+    margin-bottom: 20px;
+    width: 195px;
+    position: relative;
+}
+.password .input_wrap:last-child {
+    margin-bottom: 0;
+}
+.password, .input_wrap input {
+    padding: 15px;
+    width: 100%;
+    border: 1px solid transparent;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.password .input_wrap .input {
+    background: #b4afaf;
+    padding-right: 15px;
+}
+.password .input_wrap .input:focus {
+    border-color: #1dbf73;
+}
+.password .input_wrap .input_field {
+    position: relative;
+}
+.password .input_wrap .error_msg {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: rgb(223, 27, 27);
+    display: none;
+}
+.password .input_wrap .btn {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #1dbf73;
+    width: 228px;
+}
+
+@media (max-width:576px) {
+    body {
+        background-image: url(alat\ dan\ bahan/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        width: auto;
+    }
+    .tittle {
+        font-size: 55px;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    /* .overlay .close {
+        top: 150px;
+        padding-left: 280px;
+    } */
+    h6 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .container {
+        width: 300px;
+    }
+    .container2 {
+        width: 215px;
+        padding-top: 30px;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    .foto li {
+        width: 80px;
+        height: 80px;
+        /* overflow: hidden; */
+        float: left;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    .gambar li {
+        width: 80px;
+        height: 80px;
+        /* overflow: hidden; */
+        float: left;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .foto li span {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .gambar li span {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .overlay .close {
+        top: 210px;
+        padding-left: 240px;
+        font-size: 45px;
+    }
+}

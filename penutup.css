@@ -1,0 +1,1211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+header:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+}
+#videobg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+}
+.judul {
+    position: relative;
+    z-index: 30;
+    text-align: center;
+    padding-top: 30px;
+    color: rgb(0, 225, 255);
+    font-size: 97px;
+    font-family: "Black And White Picture";
+    text-shadow: 0 0 10px #0051ff;
+}
+.duapuluh {
+    width: 500px;
+    height: 75px;
+    margin: auto;
+    background-color: rgb(97, 31, 107);
+    z-index: 30;
+    position: relative;
+    margin-top: 30px;
+    opacity: 0.5;
+    border-radius: 50px;
+}
+.duapuluh h3 {
+    font-size: 70px;
+    position: absolute;
+    line-height: 75px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+    margin-left: 173px;
+    text-shadow: 0 0 10px #ff00f2;
+}
+.duasatu {
+    width: 500px;
+    height:75px;
+    margin: auto;
+    background-color: rgb(28, 114, 101);
+    z-index: 30;
+    position: relative;
+    opacity: 0.5;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.duasatu h3 {
+    font-size: 70px;
+    position: absolute;
+    line-height: 75px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+    margin-left: 173px;
+    text-shadow: 0 0 10px #00aeff;
+}
+.duadua {
+    width: 500px;
+    height: 75px;
+    margin: auto;
+    background-color: rgb(26, 119, 34);
+    z-index: 30;
+    position: relative;
+    opacity: 0.5;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.duadua h3 {
+    font-size: 70px;
+    position: absolute;
+    line-height: 75px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+    margin-left: 173px;
+    text-shadow: 0 0 10px #3cff00;
+}
+.duatiga {
+    width: 500px;
+    height: 75px;
+    margin: auto;
+    background-color: rgb(102, 20, 20);
+    z-index: 30;
+    position: relative;
+    opacity: 0.5;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.duatiga h3 {
+    font-size: 70px;
+    position: absolute;
+    line-height: 75px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+    margin-left: 173px;
+    text-shadow: 0 0 10px #ff0000;
+}
+.duaempat {
+    width: 500px;
+    height: 75px;
+    margin: auto;
+    background-color: rgb(17, 23, 78);
+    z-index: 30;
+    position: relative;
+    opacity: 0.5;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.duaempat h3 {
+    font-size: 70px;
+    position: absolute;
+    line-height: 75px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+    margin-left: 173px;
+    text-shadow: 0 0 10px #0026ff;
+}
+.bonus {
+    width: 500px;
+    height: 75px;
+    margin: auto;
+    background-color: rgb(97, 96, 19);
+    z-index: 30;
+    position: relative;
+    opacity: 0.5;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.bonus h3 {
+    font-size: 70px;
+    position: absolute;
+    line-height: 75px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+    margin-left: 173px;
+    text-shadow: 0 0 10px #fbff00;
+}
+
+/* overlay */
+
+/* overlay 2020 */
+
+.overlayFoto {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(184, 0, 221);
+    z-index: 40;
+    transition: 0.8s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlayFoto:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(184, 0, 221,.6);
+}
+.overlayFoto .close {
+    position: absolute;
+    top: 20px;
+    padding-left: 1050px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lilita One';
+}
+
+/* overlay 2021 */
+
+.overlayFoto21 {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(6, 255, 222);
+    z-index: 40;
+    transition: 0.8s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlayFoto21:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(6, 255, 222,.6);
+}
+.overlayFoto21 .close {
+    position: absolute;
+    top: 60px;
+    padding-left: 1050px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lilita One';
+}
+
+/* overlay 2022 */
+
+.overlayFoto22 {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 255, 21);
+    z-index: 40;
+    transition: 0.8s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlayFoto22:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 255, 21,.6);
+}
+.overlayFoto22 .close {
+    position: absolute;
+    top: 20px;
+    padding-left: 1000px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lilita One';
+}
+
+/* overlay 2023 */
+
+.overlayFoto23 {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 0, 0);
+    z-index: 40;
+    transition: 0.8s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlayFoto23:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+.overlayFoto23 .close {
+    position: absolute;
+    top: 50px;
+    padding-left: 1100px;
+    color: rgb(252, 252, 252);
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lilita One';
+}
+
+/* overlay 2024 */
+
+.overlayFoto24 {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 26, 255);
+    z-index: 40;
+    transition: 0.8s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlayFoto24:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 26, 255,.6);
+}
+.overlayFoto24 .close {
+    position: absolute;
+    top: 20px;
+    padding-left: 1100px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lilita One';
+}
+
+/* overlay bonus */
+.overlayBonus {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(192, 173, 0);
+    z-index: 40;
+    transition: 0.8s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #ddd;
+}
+.overlayBonus:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(192, 173, 0, 0.6);
+}
+.overlayBonus .close {
+    position: absolute;
+    top: 20px;
+    padding-left: 1050px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Lilita One';
+}
+
+/* style gambar */
+
+/* 2020 */
+
+.container1 {
+    width: 1200px;
+    height: 300px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+.container1 ul li img {
+    margin-left: 140px;
+    margin-right: 80px;
+    box-shadow: 0 0 40px #ffffff;
+}
+.container2 {
+    width: 1200px;
+
+}
+.container2 ul li img {
+    margin-left: 60px;
+    margin-right: 20px;
+    margin-top: 80px;
+    box-shadow: 0 0 40px #ffffff;
+}
+
+/* 2021 */
+
+.container21 {
+    width: 1000px;
+}
+.container21 ul li .satu21 {
+    margin-right: 356px;
+    box-shadow: 0 0 80px #ffffff;
+}
+.container21 ul li .dua21 {
+    box-shadow: 0 0 80px #ffffff;
+}
+
+/* 2022 */
+
+.container22-1 {
+    width: 1200px;
+}
+.container22-1 ul li img {
+    margin-left: 150px;
+    margin-right: 80px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 0 0 40px #ffffff;
+}
+.container22-2 {
+    width: 1200px;
+}
+.container22-2 ul li .empat22 {
+    margin-left: 340px;
+    box-shadow: 0 0 40px #ffffff;
+}
+.container22-2 ul li .lima22 {
+   margin-left: 230px;
+   box-shadow: 0 0 40px #ffffff;
+}
+
+/* 2023 */
+
+.container23-1 {
+    width: 1200px;
+}
+.container23-1 ul li img {
+    margin-left: 115px;
+    margin-right: 80px;
+    box-shadow: 0 0 50px #ffffff;
+}
+.container23-2 {
+    width: 1200px;
+    margin-top: 30px;
+}
+.container23-2 ul li .empat23 {
+    box-shadow: 0 0 50px #ffffff;
+    margin-left: 85px;
+}
+.container23-2 ul li .lima23 {
+    margin-left: 133px;
+    box-shadow: 0 0 50px #ffffff;
+}
+.container23-2 ul li .enam23 {
+    margin-left: 127px;
+    box-shadow: 0 0 50px #ffffff;
+}
+
+/* 2024 */
+
+.container24-1 {
+    width: 1200px;
+    margin-top: 30px;
+}
+.container24-1 ul li img {
+    margin-left: 80px;
+    box-shadow: 0 0 60px #ffffff;
+}
+.container24-2 {
+    width: 1200px;
+    margin-top: 50px;
+}
+.container24-2 ul li .empat24 {
+    margin-left: 300px;
+    box-shadow: 0 0 60px #ffffff;
+}
+.container24-2 ul li .lima24 {
+    margin-left: 160px;
+    box-shadow: 0 0 60px #ffffff;
+}
+
+/* bonus */
+
+.bonus1 {
+    width: 400px;
+    margin-right: 400px;
+}
+.bonus1 img {
+    box-shadow: 0 0 60px #ffffff;
+}
+.bonus-1 {
+    width: 150px;
+    height: 150px;
+    margin-right: 96px;
+}
+.bonus-2 {
+    width: 150px;
+    height: 150px;
+}
+.bonus2 {
+    width: 400px;
+    margin-top: 30px;
+}
+.bonus2 img {
+    box-shadow: 0 0 60px #ffffff;
+}
+.bonus-3 {
+    width: 150px;
+    height: 150px;
+    margin-right: 96px;
+}
+.bonus-4 {
+    width: 150px;
+    height: 150px;
+}
+.bonus3 {
+    width: 400px;
+    margin-top: 30px;
+}
+.bonus3 img {
+    box-shadow: 0 0 60px #ffffff;
+}
+.bonus-5 {
+    width: 150px;
+    height: 150px;
+    margin-right: 96px;
+}
+.bonus-6 {
+    width: 150px;
+    height: 150px;
+}
+.bonus4 {
+    width: 400px;
+    position: absolute;
+    margin-left: 500px;
+    top: 170px;
+}
+.bonus4 img {
+    box-shadow: 0 0 60px #ffffff;
+}
+.bonus-7 {
+    width: 150px;
+    height: 150px;
+    margin-right: 96px;
+}
+.bonus-8 {
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+}
+.bonus5 {
+    width: 400px;
+    position: absolute;
+    margin-left: 500px;
+    top: 370px;
+}
+.bonus5 img {
+    box-shadow: 0 0 80px #ffffff;
+}
+.bonus-9 {
+    width: 150px;
+    height: 150px;
+    margin-right: 96px;
+}
+.bonus-10 {
+    width: 150px;
+    height: 150px;
+}
+
+/* animasi */
+
+/* 2020 */
+
+.overlayFoto:target img {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+}
+.overlayFoto:target a {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 10.5s;
+}
+.container1 ul li .satu20 {
+    animation-delay: 2.5s;
+}
+.container1 ul li .dua20 {
+    animation-delay: 4s;
+}
+.container1 ul li .tiga20 {
+    animation-delay: 5.5s;
+}
+.container2 ul li .empat20 {
+    animation-delay: 7s;
+}
+.container2 ul li .lima20 {
+    animation-delay: 8.5s;
+}
+.container2 ul li .enam20 {
+    animation-delay: 10s;
+}
+
+/* 2021 */
+
+.overlayFoto21:target img {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+}
+.overlayFoto21:target a {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 6s;
+}
+.overlayFoto21:target h2 {
+    animation: fade-in 1s ease forwards;
+    animation-delay: 5.5s;
+    opacity: 0;
+}
+.container21 ul li .satu21 {
+    animation-delay: 2.5s;
+}
+.container21 ul li .dua21 {
+    animation-delay: 4s;
+}
+.container21 ul li h2 {
+    text-align: center;
+    padding-top: 110px;
+    font-size: 50px;
+    font-family: 'Lilita One';
+    color: rgb(0, 0, 0);
+}
+
+/* 2022 */
+
+.overlayFoto22:target img {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+}
+.overlayFoto22:target a {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 9s;
+}
+.container22-1 ul li .satu22 {
+    animation-delay: 2.5s;;
+}
+.container22-1 ul li .dua22 {
+    animation-delay: 4s;;
+}
+.container22-1 ul li .tiga22 {
+    animation-delay: 5.5s;;
+}
+.container22-2 ul li .empat22 {
+    animation-delay: 7s;;
+}
+.container22-2 ul li .lima22 {
+    animation-delay: 8.5s;;
+}
+
+/* 2023 */
+
+.overlayFoto23:target img {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+}
+.overlayFoto23:target a {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 10.5s;
+}
+.container23-1 ul li .satu23 {
+    animation-delay: 2.5s;
+}
+.container23-1 ul li .dua23 {
+    animation-delay: 4s;
+}
+.container23-1 ul li .tiga23 {
+    animation-delay: 5.5s;
+}
+.container23-2 ul li .empat23 {
+    animation-delay: 7s;
+}
+.container23-2 ul li .lima23 {
+    animation-delay: 8.5s;
+}
+.container23-2 ul li .enam23 {
+    animation-delay: 10s;
+}
+
+/* 2024 */
+
+.overlayFoto24:target img {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+}
+.overlayFoto24:target a {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 9s;
+}
+.container24-1 ul li .satu24 {
+    animation-delay: 2.5s;
+}
+.container24-1 ul li .dua24 {
+    animation-delay: 4s;
+}
+.container24-1 ul li .tiga24 {
+    animation-delay: 5.5s;
+}
+.container24-2 ul li .empat24 {
+    animation-delay: 7s;
+}
+.container24-2 ul li .lima24 {
+    animation-delay: 8.5s;
+}
+
+/* bonus */
+
+.overlayBonus:target img {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+}
+.overlayBonus:target a {
+    animation: fade-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 9.5s;
+}
+.bonus1 ul li .bonus-1 {
+    animation-delay: 2.5s;
+}
+.bonus1 ul li .bonus-2 {
+    animation-delay: 3s;
+}
+.bonus2 ul li .bonus-3 {
+    animation-delay: 4s;
+}
+.bonus2 ul li .bonus-4 {
+    animation-delay: 4.5s;
+}
+.bonus3 ul li .bonus-5 {
+    animation-delay: 5.5s;
+}
+.bonus3 ul li .bonus-6 {
+    animation-delay: 6s;
+}
+.bonus4 ul li .bonus-7 {
+    animation-delay: 7s;
+}
+.bonus4 ul li .bonus-8 {
+    animation-delay: 7.5s;
+}
+.bonus5 ul li .bonus-9 {
+    animation-delay: 8.5s;
+}
+.bonus5 ul li .bonus-10 {
+    animation-delay: 9s;
+}
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+@media (max-width:576px) {
+/* video source {
+    src: url(alat\ dan\ bahan/video/hp-kawan.mp4);
+    src: url(hp-kawan.mp4);
+} */
+.judul {
+    font-size: 35px;
+    padding-top: 90px;
+}
+.duapuluh {
+    width: 200px;
+    height: 45px;
+    margin-top: 70px;
+}
+.duapuluh h3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-left: 60px;
+}
+.duasatu {
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+}
+.duasatu h3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-left: 60px;
+}
+.duadua {
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+}
+.duadua h3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-left: 60px;
+}
+.duatiga {
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+}
+.duatiga h3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-left: 60px;
+}
+.duaempat {
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+}
+.duaempat h3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-left: 60px;
+}
+.bonus {
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+}
+.bonus h3 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-left: 60px;
+}
+
+/* overlay hp*/
+
+.overlayFoto .close {
+    padding-left: 280px;
+    font-size: 30px;
+    top: 30px;
+}
+.overlayFoto21 .close {
+    padding-left: 240px;
+    font-size: 30px;
+    top: 70px;
+}
+.overlayFoto22 .close {
+    padding-left: 280px;
+    font-size: 30px;
+    top: 140px;
+}
+.overlayFoto23 .close {
+    padding-left: 280px;
+    font-size: 30px;
+    top: 40px;
+}
+.overlayFoto24 .close {
+    padding-left: 250px;
+    font-size: 30px;
+    top: 60px;
+}
+.overlayBonus .close {
+    padding-left: 260px;
+    font-size: 30px;
+    top: 100px;
+}
+
+
+
+/* style gambar hp*/
+
+
+/* 2020 hp*/
+
+.container1 {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    margin: auto;
+    padding-top: 5px;
+    margin-top: 30px;
+}
+.container1 ul li .satu20 {
+    width: 75px;
+    height: 150px;
+    margin-left: 13px;
+    margin-right: 0px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container1 ul li .dua20 {
+    width: 75px;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 0px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container1 ul li .tiga20 {
+    width: 75px;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 0px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container2 {
+    width: 300px;
+}
+.container2 ul li .empat20 {
+    width: 190px;
+    height: 109px;
+    margin-top: 35px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container2 ul li .lima20 {
+    width: 190px;
+    height: 109px;
+    margin-top: 35px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container2 ul li .enam20 {
+    width: 134px;
+    height: 108px;
+    margin-top: 35px;
+    margin-left: 90px;
+    box-shadow: 0 0 20px #ffffff;
+}
+
+
+/* 2021 hp*/
+
+.container21 {
+    width: 300px;
+}
+.container21 ul li .satu21 {
+    width: 240px;
+    height: 160px;
+    margin-right: 0px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.container21 ul li .dua21 {
+    width: 240px;
+    height: 160px;
+    margin-left: 30px;
+}
+.container21 ul li h2 {
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+
+
+/* 2022 hp */
+
+.container22-1 {
+    width: 270px;
+    margin: auto;
+    /* background-color: #00aeff; */
+}
+.container22-1 ul li .satu22 {
+    width: 80px;
+    height: 135px;
+    margin-left: 9px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: 0 0 30px #ffffff;
+}
+.container22-1 ul li .dua22 {
+    width: 80px;
+    height: 135px;
+    margin-left: 2px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: 0 0 30px #ffffff;
+}
+.container22-1 ul li .tiga22 {
+    width: 80px;
+    height: 135px;
+    margin-left: 1px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: 0 0 30px #ffffff;
+}
+.container22-2 {
+    width: 300px;
+}
+.container22-2 ul li .empat22 {
+    width: 80px;
+    height: 135px;
+    margin-left: 58px;
+    margin-top: 50px;
+    box-shadow: 0 0 30px #ffffff;
+}
+.container22-2 ul li .lima22 {
+    width: 80px;
+    height: 135px;
+    margin-left: 11px;
+    box-shadow: 0 0 30px #ffffff;
+}
+
+
+
+/* 2023 hp*/
+
+.container23-1 {
+    width: 300px;
+    margin: auto;
+    /* background-color: #3cff00; */
+}
+.container23-1 ul li .satu23 {
+    width: 76px;
+    height: 120px;
+    margin-left: 25px;
+    margin-right: 2px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px #ffffff;
+}
+.container23-1 ul li .dua23 {
+    width: 76px;
+    height: 120px;
+    margin-left: 0px;
+    margin-right: 2px;
+    box-shadow: 0 0 10px #ffffff;
+}
+.container23-1 ul li .tiga23 {
+    width: 76px;
+    height: 120px;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-shadow: 0 0 10px #ffffff;
+}
+.container23-2 {
+    width: 300px;
+    margin-top: 40px;
+    /* background-color: #3cff00; */
+}
+.container23-2 ul li .empat23 {
+    width: 220px;
+    height: 128px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #ffffff;
+}
+.container23-2 ul li .lima23 {
+    width: 220px;
+    height: 128px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #ffffff;
+}
+.container23-2 ul li .enam23 {
+    width: 220px;
+    height: 109px;
+    margin-left: 50px;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+
+/* 2024 hp */
+
+.container24-1 {
+    width: 300px;
+    margin-top: 30px;
+}
+.container24-1 ul li .satu24 {
+    width: 165px;
+    height: 119px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container24-1 ul li .dua24 {
+    width: 165px;
+    height: 119px;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container24-1 ul li .tiga24 {
+    width: 165px;
+    height: 119px;
+    margin-left: 135px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container24-2 {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: #00aeff;
+}
+.container24-2 ul li .empat24 {
+    width: 105px;
+    height: 141px;
+    margin-left: 38px;  
+    margin-right: 10px;
+    box-shadow: 0 0 20px #ffffff;
+}
+.container24-2 ul li .lima24 {
+    width: 105px;
+    height: 141px;
+    margin-left: 0px;
+    box-shadow: 0 0 20px #ffffff;
+}
+
+/* bonus hp */
+
+.bonus1 {
+    width: 300px;
+    margin-right: 0px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    /* background-color: #00aeff; */
+}
+.bonus1 img {
+    box-shadow: 0 0 40px #ffffff;
+}
+.bonus-1 {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 70px;
+}
+.bonus-2 {
+    width: 70px;
+    height: 70px;
+}
+.bonus2 {
+    width: 300px;
+    margin: auto;
+    /* background-color: #00aeff; */
+}
+.bonus2 img {
+    box-shadow: 0 0 40px #ffffff;
+}
+.bonus-3 {
+    width: 70px;
+    height: 70px;
+    margin-right: 78px;
+    margin-left: 40px;
+}
+.bonus-4 {
+    width: 70px;
+    height: 70px;
+}
+.bonus3 {
+    margin-bottom: 20px;
+    width: 300px;
+    margin-top: 20px;
+    /* background-color: #00aeff; */
+}
+.bonus3 img {
+    box-shadow: 0 0 40px #ffffff;
+}
+.bonus-5 {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 70px;
+}
+.bonus-6 {
+    width: 70px;
+    height: 70px;
+}
+.bonus4 {
+    width: 300px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin: auto;
+    top: 0px;
+    /* background-color: #00aeff; */
+}
+.bonus4 img {
+    box-shadow: 0 0 40px #ffffff;
+}
+.bonus-7 {
+    width: 70px;
+    height: 70px;
+    margin-right: 78px;
+    margin-left: 40px;
+}
+.bonus-8 {
+    width: 70px;
+    height: 70px;
+    margin-left: 0px;
+}
+.bonus5 {
+    width: 300px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 2px;
+    top: 0px;
+    /* background-color: #00aeff; */
+}
+.bonus5 img {
+    box-shadow: 0 0 50px #ffffff;
+}
+.bonus-9 {
+    width: 105px;
+    height: 105px;
+    margin-right: 10px;
+    margin-left: 35px;
+}
+.bonus-10 {
+    width: 105px;
+    height: 105px;
+}
+}
